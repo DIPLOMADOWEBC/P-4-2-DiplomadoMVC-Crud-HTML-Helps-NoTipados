@@ -1,0 +1,38 @@
+﻿@model P_4_2_DiplomadoMVC_Crud_HTML_Helps_NoTipados.Models.Productos
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Datos Producto</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("ModificacionProducto", "Home", FormMethod.Post))
+        {
+            <p>
+                Codigo de Producto:
+                @Html.Display("Id")
+                @Html.Hidden("Id")
+            </p>
+            <p>
+                Descripcion:
+                @Html.TextBox("Descripcion")
+            </p>
+            <p>
+                Tipo:
+                @Html.TextBox("Tipo")
+            </p>
+            <p>
+                Precio:
+                @Html.TextBox("Precio")
+            </p>
+            <p>
+                <input type="submit" value="Confirmar" />
+            </p>
+        }
+    </div>
+</body>
+</html>
